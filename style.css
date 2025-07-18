@@ -21,6 +21,46 @@ header {
   justify-content: space-between;
 }
 
+.hero {
+    background-image: url('sua-imagem.jpg'); /* Troque pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn-saiba-mais {
+    background: #218c1e;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background: #176a15;
+}
+
 header h1 {
   font-size: 24px;
 }
