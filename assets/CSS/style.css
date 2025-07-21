@@ -99,3 +99,55 @@ main h2 {
 main p {
   font-size: 18px;
 }
+
+section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2f855a;
+  margin-bottom: 40px;
+}
+
+.cultivos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cultivo {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cultivo:hover {
+  transform: translateY(-5px);
+}
+
+.cultivo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.cultivo h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2f855a;
+}
+
+.cultivo p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
