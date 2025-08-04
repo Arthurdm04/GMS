@@ -22,14 +22,21 @@ header {
 }
 
 .hero {
-    background-image: url('../maquina_campo.png'); /* sua imagem */
+    background-image: url('../maquina_campo.png');
     background-size: cover;
     background-position: center;
-    height: 500px; /* altura um pouco maior para respiro */
+    height: 500px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Adicione estas duas propriedades para garantir que ocupe 100% da largura */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh; /* Exemplo: 60% da altura da tela */
+    /* Outra opção: min-height, para que ela nunca fique menor que um valor mínimo */
+    min-height: 400px;
 }
 
 /* Camada escura por cima da imagem para dar contraste ao texto */
@@ -39,7 +46,6 @@ header {
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.4); /* ajustável */
     z-index: 1;
-    border-radius: 8px;
 }
 
 .hero-content {
@@ -55,7 +61,8 @@ header {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
 .btn-saiba-mais {
@@ -120,6 +127,15 @@ section {
   padding: 60px 20px;
   background-color: #f9f9f9;
 }
+section:nth-of-type(2) {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 60px;
+}
+
 
 section h2 {
   text-align: center;
@@ -143,7 +159,15 @@ section h2 {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  min-height: 430px; /* padroniza altura dos cards */
 }
+
+@media (max-width: 600px) {
+  .cultivo {
+    min-height: auto;
+  }
+}
+
 
 .cultivo:hover {
   transform: translateY(-5px);
@@ -269,29 +293,75 @@ section h2 {
 }
 
 
-.footer-parcerias {
-  background-color: #005e5c; /* verde escuro do Figma */
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .footer-parcerias {
+    background-color: #005e5c; /* verde escuro do Figma */
+    padding: 40px 20px;
+    
+    /* Novo código para o layout principal do footer */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Garante que o texto também seja centralizado */
 }
 
 .parcerias {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Adiciona um espaço entre os logos e o texto */
 }
 
 .parcerias img {
-  height: 60px; /* ajuste conforme o tamanho dos logos */
-  max-width: 100%;
-  object-fit: contain;
-  transition: transform 0.3s;
+    height: 60px; /* ajuste conforme o tamanho dos logos */
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
 }
 
 .parcerias img:hover {
-  transform: scale(1.05); /* efeito sutil ao passar o mouse */
+    transform: scale(1.05); /* efeito sutil ao passar o mouse */
+}
+
+/* Opcional: ajustar o tamanho do logo `parceria_2.png` se ele for a folha verde */
+/* Se a imagem da folha verde for `parceria_2.png`, você pode ajustar seu tamanho aqui */
+.parcerias img[src*="parceria_2"] {
+    height: 45px; /* Altura um pouco menor para a folha */
+    /* Você pode ajustar isso para que fique proporcional aos outros logos */
+}
+
+
+.footer-info {
+    /* Essa classe não precisa de muitas alterações com o novo layout */
+    color: white;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+/* Adicione este bloco no final do seu CSS */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .btn-saiba-mais {
+        padding: 12px 30px; /* Reduz o padding do botão */
+        font-size: 1rem;
+    }
 }
