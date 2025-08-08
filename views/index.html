@@ -1,119 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/CSS/style.css">
-    <link rel="shortcut icon" href="../assets/logo_GMS.png" type="image/x-icon">
-    <title>GMS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="O Grupo GMS oferece soluções para o agronegócio com cultivos, infraestrutura e inovação no campo.">
+    <title>GMS Agrícola</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../assets/gms logo .png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <h1>Grupo GMS</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="navbar navbar-expand-lg navbar-menu border-bottom-custom">
+        <div class="container py-2" >
+            <a class="navbar-brand" href="index.html"> <img src="../assets/logo_GMS.png" alt="Grupo GMS" class="menu-logo"></a>
+            <div class="collapse navbar-collapse" id="menuNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu-links">
+                    <li class="nav-item"><a href="#empresa" class="nav-link">A EMPRESA</a></li>
+                    <li class="nav-item"><a href="#sementes" class="nav-link">SEMENTES</a></li>
+                    <li class="nav-item"><a href="#produzimos" class="nav-link">O QUE PRODUZIMOS</a></li>
+                    <li class="nav-item"><a href="#unidades" class="nav-link">NOSSAS UNIDADES</a></li>
+                    <li class="nav-item"><a href="#noticias" class="nav-link">NOTÍCIAS</a></li>
+                    <li class="nav-item"><a href="#galeria" class="nav-link">GALERIA</a></li>
+                    <li class="nav-item"><a href="#trabalhe" class="nav-link">TRABALHE CONOSCO</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">CONTATO</a></li>
+                </ul>
+            </div>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
     </header>
 
     <main>
+        <h1>Soluções para o Agronegócio</h1>
+        <p>O Grupo GMS é uma empresa especializada em soluções para o agronegócio...</p>
+        <br><br>
         <section class="hero">
             <div class="hero-content">
-                <h2>SOLUÇÕES PARA O AGRONEGÓCIO</h2>
-                <a href="sobre.html" class="btn-saiba-mais">SAIBA MAIS</a>
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/carousel/554ae7ffa651425e9196ea88621433b6.jpg"
+                                class="d-block w-100 carousel-img" alt="Imagem 1 do campo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/carousel/63274878c63846ada93147a814e4feff.jpg"
+                                class="d-block w-100 carousel-img" alt="Imagem 2 do campo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/carousel/9be846f73d314b8d9474cc4de8f6c05b.jpg"
+                                class="d-block w-100 carousel-img" alt="Imagem 3 do campo">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
             </div>
         </section>
-        <section>
-           <h2>Sobre Nós</h2>
+
+        <section id="sobre" class="sobre-section">
+            <h2>Sobre Nós</h2>
            <p>Fundada por Carlos Moresco e Genes Ceppo, a empresa iniciou suas atividades em 2003 com arrendamentos agrícolas em Goiás. Hoje, atua com excelência no setor agropecuário.</p>
         </section>
-<br>
-        <section>
+
+        <section id="cultivos" class="cultivos-section">
             <h2>Cultivos</h2>
             <div class="cultivos">
+                <!-- Cards de cultivo -->
                 <div class="cultivo">
-                    <img src="../assets/soja_mini.png" alt="Cultivo de soja">
+                    <img src="../assets/soja_mini.png" alt="Cultivo de soja" loading="lazy">
                     <h3>Cultivo de Soja</h3>
                     <p>A cultura da soja é uma das principais da agricultura brasileira. É uma planta leguminosa usada na alimentação humana e animal, além da produção de óleo e biocombustível. Cresce melhor em clima quente e solo fértil, com bom manejo e controle de pragas.</p>
                 </div>
                 <div class="cultivo">
-                    <img src="../assets/milho_mini.png" alt="Cultivo de milho">
+                    <img src="../assets/milho_mini.png" alt="Cultivo de milho" loading="lazy">
                     <h3>Cultivo de Milho</h3>
                     <p>O milho é um dos principais cereais cultivados no Brasil, sendo utilizado na alimentação humana e animal, além da produção de etanol. A planta se desenvolve melhor em solos férteis e bem drenados, com clima quente e úmido.</p>
                 </div>
                 <div class="cultivo">
-                    <img src="../assets/algodao_mini.png" alt="Cultivo de algodão">
+                    <img src="../assets/algodao_mini.png" alt="Cultivo de algodão" loading="lazy">
                     <h3>Cultivo de Algodão</h3>
                     <p>O cultivo de algodão é uma das principais atividades do agronegócio brasileiro. A planta se adapta a diferentes tipos de solo, mas prefere os mais férteis e bem drenados. O algodão é utilizado na indústria têxtil e na produção de óleo.</p>
                 </div>
-                 <div class="cultivo">
-                    <img src="../assets/tomate_mini.png" alt="Cultivo de tomate">
+                <div class="cultivo">
+                    <img src="../assets/tomate_mini.png" alt="Cultivo de tomate" loading="lazy">
                     <h3>Cultivo de Tomate</h3>
                     <p>O cultivo de tomate é uma das principais atividades do agronegócio brasileiro. A planta se adapta a diferentes tipos de solo, mas prefere os mais férteis e bem drenados. O tomate é utilizado na indústria alimentícia e na produção de molho.</p>
                 </div>
-                  <div class="cultivo">
-                    <img src="../assets/trigo_mini.png" alt="Cultivo de trigo">
+                <div class="cultivo">
+                    <img src="../assets/trigo_mini.png" alt="Cultivo de trigo" loading="lazy">
                     <h3>Cultivo de Trigo</h3>
                     <p>O cultivo de trigo é uma das principais atividades do agronegócio brasileiro. A planta se adapta a diferentes tipos de solo, mas prefere os mais férteis e bem drenados. O trigo é utilizado na indústria alimentícia e na produção de farinha.</p>
                 </div>
+            </div>
         </section>
-<br>
+
         <section>
             <h2>Infraestrutura</h2>
             <div id="infra">
+                <!-- Cards da infra -->
                 <div class="infra-item">
-                <img src="../assets/algodoeira.png" alt="Algodoeira GMS">
-                <div class="descricao">
-                    <h3>Algodoeira</h3>
-                    <p>A GM Algodoeira é responsável pelo beneficiamento do algodão após a colheita, realizando a separação da fibra e das sementes. Durante esse processo, impurezas como poeira e folhas são removidas. Em seguida, a fibra é classificada e compactada em fardos para comercialização. O caroço do algodão também é aproveitado, sendo destinado à produção de ração animal e óleo. A usina desempenha um papel fundamental na agregação de valor ao algodão e na geração de subprodutos.</p>
+                    <img src="../assets/algodoeira.png" alt="Imagem da algodoeira da GMS" loading="lazy">
+                    <div class="descricao">
+                        <h3>Algodoeira</h3>
+                        <p>A GM Algodoeira é responsável pelo beneficiamento do algodão após a colheita, realizando a separação da fibra e das sementes. Durante esse processo, impurezas como poeira e folhas são removidas. Em seguida, a fibra é classificada e compactada em fardos para comercialização. O caroço do algodão também é aproveitado, sendo destinado à produção de ração animal e óleo. A usina desempenha um papel fundamental na agregação de valor ao algodão e na geração de subprodutos.</p>
+                    </div>
                 </div>
-            </div>
-
-                <!-- <div class="infra-item_2">
-                <img class="imagem_silo" src="../assets/silo.png" alt="Silos GMS">
-                <div class="descricao">
-                    <h3 class="titulo_silo" >Silo</h3>
-                    <p class="paragrafo_silo" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem recusandae neque quibusdam quasi! Maxime corporis doloremque quisquam similique odio! Sit eius corrupti molestias. Harum itaque voluptas amet, quas esse accusamus? Mollitia ipsa ipsum debitis! Maiores commodi tenetur quidem repellendus quia.</p>
-                </div> -->
-
-                <div class="infra-item_2">
-                <div class="descricao">
-                    <h3 class="titulo_silo">Silo</h3>
-                    <p class="paragrafo_silo">O silo é responsável pelo armazenamento adequado dos grãos colhidos, como soja, milho e algodão, garantindo sua conservação até o momento da comercialização ou beneficiamento. Esse processo é essencial para manter a qualidade dos grãos, evitando perdas por umidade, pragas ou deterioração. Os silos contam com sistemas de aeração e monitoramento que controlam a temperatura e a umidade interna, assegurando um ambiente ideal de estocagem. Além disso, permitem maior planejamento logístico e flexibilidade nas operações agrícolas, sendo um elo estratégico entre o campo e o mercado.</p>
-                </div>
-                    <img class="imagem_silo" src="../assets/silo.png" alt="Silos GMS">
-                </div>
-
                 <div class="infra-item">
-                    <img src="../assets/escritorio.jpg" alt="#">
+                    <div class="descricao">
+                        <h3>Silo</h3>
+                        <p>O silo é responsável pelo armazenamento adequado dos grãos colhidos, como soja, milho e algodão, garantindo sua conservação até o momento da comercialização ou beneficiamento. Esse processo é essencial para manter a qualidade dos grãos, evitando perdas por umidade, pragas ou deterioração. Os silos contam com sistemas de aeração e monitoramento que controlam a temperatura e a umidade interna, assegurando um ambiente ideal de estocagem. Além disso, permitem maior planejamento logístico e flexibilidade nas operações agrícolas, sendo um elo estratégico entre o campo e o mercado.</p>
+                    </div>
+                    <img src="../assets/silo.png" alt="Imagem do silo da GMS" loading="lazy">
+                </div>
+                <div class="infra-item">
+                    <img src="../assets/escritorio.jpg" alt="Imagem do escritório do Grupo GMS" loading="lazy">
                     <div class="descricao">
                         <h3>Escritório</h3>
                         <p>O escritório do Grupo GMS é o centro administrativo e estratégico das nossas operações. É aqui que são conduzidos os planejamentos, decisões e controles que garantem o bom funcionamento das atividades no campo. Com uma equipe comprometida e estrutura moderna, o ambiente favorece a organização, a eficiência e o desenvolvimento constante do nosso negócio.</p>
                     </div>
                 </div>
             </div>
-
-
-      <footer class="footer-parcerias">
-    <div class="parcerias">
-        <img src="../assets/parceria_1.png" alt="Parceiro 1" />
-        <img src="../assets/parceria_2.png" alt="Parceiro 2" />
-        <img src="../assets/parceria_3.jpg" alt="Parceiro 3" />
-    </div>
-
-    <div class="footer-info">
-        <p>© 2025 Grupo GMS | Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-
-
         </section>
     </main>
-    <script src="../controllers/script.js"></script>
+
+    <footer class="footer-gms mt-5">
+        <div class="container py-4">
+            <div class="row justify-content-center align-items-center text-center">
+                <!-- Logos de certificações -->
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <img src="../assets/certificados/abr.png" alt="ABR" class="footer-cert">
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <img src="../assets/certificados/mudinha.png" alt="Sustentável" class="footer-cert">
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="../assets/certificados/better-cotton-initiative-bci-logo-vector.png" alt="BCI"
+                        class="footer-cert">
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 Grupo GMS | Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

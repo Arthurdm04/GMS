@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* ---------------------- HEADER ---------------------- */
+header {
+  background: linear-gradient(90deg, #2f855a, #3cb371);
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.menu-logo, .logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ---------------------- NAV ---------------------- */
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 28px;
+  color: white;
+  border: none;
+}
+
+.navbar-menu {
+  background-color: #2f6e5a;
+  border-bottom: 4px solid #f8cc00;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #c4fcd2;
+}
+
+.menu-links .nav-link {
+  color: white !important;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+  position: relative;
+  left: 8%;
+}
+
+.menu-links .nav-link:hover {
+  color: #f8cc00 !important;
+}
+
+.navbar-toggler {
+  background-color: white;
+  border-radius: 4px;
+  margin-left: 50%;
+}
+
+.border-bottom-custom {
+  border-bottom: 4px solid #f8cc00;
+}
+
+/* ---------------------- HERO ---------------------- */
+.hero {
+  background-image: url('../maquina_campo.png');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  min-height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn-saiba-mais {
+  background: #218c1e;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-saiba-mais:hover {
+  background: #176a15;
+}
+
+/* ---------------------- MAIN / SECTION ---------------------- */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  margin-bottom: 20px;
+  color: #2f855a;
+}
+
+main p {
+  font-size: 18px;
+}
+
+section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+section:nth-of-type(2) {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2f855a;
+  margin-bottom: 40px;
+}
+
+/* ---------------------- CULTIVOS ---------------------- */
+.cultivos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cultivo {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 430px;
+}
+
+.cultivo:hover {
+  transform: translateY(-5px);
+}
+
+.cultivo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.cultivo h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2f855a;
+}
+
+.cultivo p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ---------------------- INFRA ---------------------- */
+#infra {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.infra-item, .infra-item_2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.infra-item img, .infra-item_2 img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.infra-item .descricao, .infra-item_2 .descricao {
+  flex: 1;
+}
+
+.descricao h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.descricao p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+.footer-gms {
+  background-color: #2f855a;
+  border-top: 4px solid #f8cc00;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-gms p {
+  margin: 0;
+}
+
+.footer-cert {
+  height: 50px;
+  object-fit: contain;
+  max-width: 100%;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-cert:hover {
+  transform: scale(1.05);
+}
+
+.footer-info {
+  color: white;
+  font-size: 14px;
+}
+
+.parcerias {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.parcerias img {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.parcerias img:hover {
+  transform: scale(1.05);
+}
+
+.parcerias img[src*="parceria_2"] {
+  height: 45px;
+}
+
+/* ---------------------- CAROUSEL ---------------------- */
+.carousel,
+.carousel-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------------------- MEDIA QUERY ---------------------- */
+@media (max-width: 768px) {
+  .infra-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .infra-item img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collapse.navbar-collapse {
+    margin-left: 0%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .mobile-nav.open ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .btn-saiba-mais {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .cultivo {
+    min-height: auto;
+  }
+}
