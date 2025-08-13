@@ -404,3 +404,181 @@ section h2 {
     min-height: auto;
   }
 }
+
+.timeline-container {
+  margin-top: 40px;
+  position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2f855a;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #2f855a;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #f8cc00;
+  border: 3px solid #2f855a;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 0 4px rgba(248, 204, 0, 0.3);
+}
+
+.timeline-item.right::before {
+  left: -10px;
+  right: auto;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.timeline-content h4 {
+  color: #2f855a;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item::before {
+    left: 15px;
+    right: auto;
+  }
+}
+
+/* ===== Missão | Visão | Valores (cards interativos) ===== */
+.mvv-section{
+  padding:64px 0;
+}
+.mvv-card{
+  background:#ffffff;
+  border:1px solid #e8ece8;
+  border-radius:20px;
+  padding:26px 22px;
+  height:100%;
+  text-align:center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+  position:relative;
+  overflow:hidden;
+}
+.mvv-card::after{
+  /* barra decorativa sutil no topo esquerdo */
+  content:"";
+  position:absolute;
+  inset:0 auto auto 0;
+  width:6px; height:100%;
+  background: linear-gradient(180deg, #2f855a, #f8cc00);
+  opacity:.65;
+  border-radius: 20px 0 0 20px;
+  transition: opacity .25s ease, filter .25s ease;
+}
+.mvv-icon{
+  width:72px; height:72px;
+  margin: 4px auto 10px;
+  display:grid; place-items:center;
+  border-radius:16px;
+  color:#2f855a;
+  background: rgba(47,133,90,.08);
+  transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+.mvv-title{
+  text-transform: uppercase;
+  letter-spacing:.04em;
+  font-weight:800;
+  color:#2f855a;
+  margin:10px 0 8px;
+}
+.mvv-text{
+  color:#2a2a2a;
+  font-size:0.98rem;
+  line-height:1.55;
+  margin:0;
+}
+
+/* Hover interativo */
+.mvv-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+  border-color:#2f855a22;
+}
+.mvv-card:hover .mvv-icon{
+  transform: scale(1.06);
+  background: rgba(248,204,0,.16);
+  color:#2f855a;
+}
+.mvv-card:hover::after{
+  opacity:1; filter: saturate(120%);
+}
+
+/* Responsivo */
+@media (max-width: 768px){
+  .mvv-section{ padding:48px 0; }
+}
+
+.mvv-section {
+  margin-top: 80px; /* espaçamento externo */
+  padding: 80px 0;  /* espaçamento interno */
+}
