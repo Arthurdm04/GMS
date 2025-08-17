@@ -29,9 +29,5 @@ Este é o site institucional do **Grupo GMS**, desenvolvido como uma landing pag
 
 ---
 
-## 📷 Prévia
-(Sugestão: coloca um print bonito do site aqui, tipo da home)
----
-
 ## 👨‍💻 Autor
-Desenvolvido por [Arthur Dias Moresco] durante a reformulação do site do Grupo GMS 🚜
+Desenvolvido por Arthur Dias Moresco durante a reformulação do site do Grupo GMS 🚜
