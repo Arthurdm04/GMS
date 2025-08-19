@@ -275,6 +275,32 @@ section h2 {
   color: #333;
 }
 
+@media (max-width: 768px){
+  .infra-item{
+    flex-direction: column !important;   /* anula row/row-reverse */
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* garanta que a imagem venha primeiro */
+  .infra-item > img{
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .infra-item > .descricao{
+    order: 2;
+    width: 100%;
+  }
+
+  /* se tiver usado nth-child(even) acima, força a mesma ordem no mobile */
+  .infra-item:nth-child(even){
+    flex-direction: column !important;
+  }
+}
 /* ---------------------- FOOTER ---------------------- */
 /* FOOTER */
 .footer-gms{
